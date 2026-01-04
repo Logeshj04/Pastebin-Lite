@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: paste-link-app
+    env: node
+    plan: starter
+    buildCommand: "npm run build"
+    startCommand: "npm start"
+    envVars:
+      - key: UPSTASH_REDIS_REST_URL
+      - key: UPSTASH_REDIS_REST_TOKEN
+      - key: NODE_ENV
+        value: production
